@@ -2,8 +2,7 @@
     cowrie
     100000-100009  
     /home/stoksoz/tpotce/data/cowrie/log/cowrie.json
-    {"eventid":"cowrie.session.connect","src_ip":"61.111.11.240","src_port":48512,"dst_ip":"172.27.0.2","dst_port":22,"session":"e741444d9a26","protocol":"ssh","message":"New connection: 
-    1.111.11.240:48512 (172.27.0.2:22) [session: e741444d9a26]","sensor":"cda3677a877e","timestamp":"2024-04-27T15:19:10.564670Z"}{"eventid":
+    {"eventid":"cowrie.session.connect","src_ip":"61.111.11.240","src_port":48512,"dst_ip":"172.27.0.2","dst_port":22,"session":"e741444d9a26","protocol":"ssh","message":"New connection: 1.111.11.240:48512 (172.27.0.2:22) [session: e741444d9a26]","sensor":"cda3677a877e","timestamp":"2024-04-27T15:19:10.564670Z"}{"eventid":
 -->
 
 <group name="cowrie,">
