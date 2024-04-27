@@ -1,3 +1,5 @@
+#tpotce data log file fider any files with .log or .json
+
 import os
 
 def generate_config(local_files):
@@ -22,3 +24,5 @@ local_files = get_local_files(directory)
 configs = generate_config(local_files)
 for config in configs:
     print(config)
+
+#use this on wazuh manager agent group ossec config
