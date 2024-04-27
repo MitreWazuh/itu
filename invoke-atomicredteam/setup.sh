@@ -10,3 +10,4 @@ docker run -it invoke-atomicredteam:latest
 
 Test
 Invoke-AtomicTest T1003.008
+Invoke-AtomicTest All
