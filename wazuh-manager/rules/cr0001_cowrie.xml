@@ -1,0 +1,22 @@
+<!--
+    cowrie
+-->
+
+<!-- ID:100000-100099 -->
+
+<group name="cowrie,">
+
+<!--
+
+{"eventid":"cowrie.session.connect","src_ip":"61.111.11.240","src_port":48512,"dst_ip":"172.27.0.2","dst_port":22,"session":"e741444d9a26","protocol":"ssh","message":"New connection: 61.111.11.240:48512 (172.27.0.2:22) [session: e741444d9a26]","sensor":"cda3677a877e","timestamp":"2024-04-27T15:19:10.564670Z"}
+{"eventid":
+
+-->
+    <rule id="100000" level="5">
+        <decoded_as>json</decoded_as>
+        <field name="eventid">^cowrie</field>
+        <description>cowrie messages.</description>
+    </rule>
+
+  
+</group>
