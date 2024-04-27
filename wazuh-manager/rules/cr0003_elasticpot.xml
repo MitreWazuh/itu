@@ -1,0 +1,18 @@
+<!--
+    elasticpot.recon
+    100020-100029  
+    /home/stoksoz/tpotce/data/elasticpot/log/elasticpot.json
+    {"eventid":"elasticpot.recon","message":"Scan","url":"/_search","timestamp":"2024-04-27T16:31:25.321060Z","src_ip":"172.212.57.176","src_port":50438,"dst_port":9200,"sensor":"t-pot","request":"GET","user_agent":"Mozilla/5.0 zgrab/0.x","dst_ip":"192.168.80.2"}
+  -->
+
+
+<group name="elasticpot,">
+
+    <rule id="100020" level="5">
+        <decoded_as>json</decoded_as>
+        <field name="eventid">^elasticpot.recon$</field>
+        <description>adbhoney messages.</description>
+    </rule>
+
+  
+</group>
