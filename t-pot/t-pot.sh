@@ -1,4 +1,6 @@
-uname -a
+unam -a
+Linux tpot 5.10.0-28-cloud-amd64 #1 SMP Debian 5.10.209-2 (2024-01-31) x86_64 GNU/Linux
+
 
 sudo apt update -y && sudo apt upgrade -y
 
