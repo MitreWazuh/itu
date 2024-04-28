@@ -1,0 +1,21 @@
+<!--
+	p0f
+    100040-100039  
+    /home/stoksoz/tpotce/data/p0f/log/p0f.json
+    {"timestamp": "2024/04/28 06:37:41", "mod": "uptime", "client_ip": "10.1.0.4", "server_ip": "168.63.129.16", "client_port": 36858, "server_port": 80, "subject": "srv", "uptime": "21 days 20 hrs 57 min (modulo 49 days)", "raw_freq": "1000.00 Hz"} 
+-->
+  
+
+
+<group name="p0f,">
+
+    <rule id="100040" level="5">
+        <decoded_as>json</decoded_as>
+        <field name="timestamp">\.+</field>
+        <field name="mod">\.+</field>
+        <field name="client_ip">\.+</field>
+        <description>fatt messages.</description>
+    </rule>
+
+  
+</group>
