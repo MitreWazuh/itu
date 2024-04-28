@@ -1,0 +1,21 @@
+<!--
+    fatt
+    100030-100039  
+    /home/stoksoz/tpotce/data/fatt/log/fatt.log
+  {"timestamp": "2024-04-28T06:55:39.915488", "sourceIp": "20.209.74.65", "destinationIp": "10.1.0.4", "sourcePort": "443", "destinationPort": "51954", "protocol": "tls", "tls": {"ja3s": "33041e77e884c5f438f2076ae1e21278", "ja3sAlgorithms": "771,0x1302,43-51", "ja3sVersion": "771", "ja3sCiphers": "0x1302", "ja3sExtensions": "43-51"}}
+ -->
+
+
+<group name="fatt,">
+
+    <rule id="100020" level="5">
+        <decoded_as>json</decoded_as>
+        <field name="timestamp">\.+</field>
+        <field name=" tls.ja3s">\.+</field>
+        <field name=" tls.ja3sAlgorithms">\.+</field>
+        <description>fatt messages.</description>
+    </rule>
+
+  
+</group>
+
