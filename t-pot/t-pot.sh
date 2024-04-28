@@ -4,6 +4,7 @@ Linux tpot 5.10.0-28-cloud-amd64 #1 SMP Debian 5.10.209-2 (2024-01-31) x86_64 GN
 
 sudo apt update -y && sudo apt upgrade -y
 env bash -c "$(curl -sL https://github.com/telekom-security/tpotce/raw/master/install.sh)"
+sudo chmod -R 777 /home/stoksoz/tpotce/data/
 sudo reboot
 
 firewall setup
