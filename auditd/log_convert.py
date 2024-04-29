@@ -5,7 +5,8 @@ import json
 audit_log_path = "/var/log/audit/audit.log"
 
 # Define the path to the syslog file
-syslog_path = "/home/stoksoz/syslog"
+syslog_path = "/var/ossec/logs/active-responses.log"
+
 
 # Regular expression pattern to match log entries
 log_pattern = re.compile(r'type=(\w+)\s+msg=audit\((\d+\.\d+):(\d+)\):(.*)')
