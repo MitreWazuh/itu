@@ -1,0 +1,20 @@
+<!--
+auditd
+100050-100059  
+/home/stoksoz/tpotce/data/p0f/log/p0f.json
+{"logsource": "auditd", "type": "SYSCALL", "audit_timestamp": "1714373268.867", "audit_id": "517673", "details": {"arch": "c000003e", "syscall": "0", "success": "yes", "exit": "8192", "a0": "3", "a1": "55cfe7bdcf70", "a2": "2000", "a3": "0", "items": "0", "ppid": "75933", "pid": "75934", "auid": "1002", "uid": "0", "gid": "0", "euid": "0", "suid": "0", "fsuid": "0", "egid": "0", "sgid": "0", "fsgid": "0", "tty": "pts1", "ses": "72", "comm": "\"python3\"", "exe": "\"/usr/bin/python3.10\"", "subj": "unconfined", "key": "\"T1552\"", "ARCH": "x86_64", "SYSCALL": "read", "AUID": "\"stoksoz\"", "UID": "\"root\"", "GID": "\"root\"", "EUID": "\"root\"", "SUID": "\"root\"", "FSUID": "\"root\"", "EGID": "\"root\"", "SGID": "\"root\"", "FSGID": "\"root\""}}
+-->
+  
+
+
+<group name="audit,">
+
+    <rule id="100050" level="5">
+        <decoded_as>json</decoded_as>
+        <field name="logsource">auditd</field>
+        <field name="mod">\.+</field>
+        <description>auditd messages.</description>
+    </rule>
+
+  
+</group>
