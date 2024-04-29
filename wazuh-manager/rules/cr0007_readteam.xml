@@ -134,5 +134,115 @@ readteam
         <description>Auditd: mitre attack T1040</description>
         <mitre><id>T1040</id></mitre>
     </rule>
+
+        <rule id="100071" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1046</field>
+        <description>Auditd: mitre attack T1046</description>
+        <mitre><id>T1046</id></mitre>
+    </rule>
+    <rule id="100072" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1048</field>
+        <description>Auditd: mitre attack T1048</description>
+        <mitre><id>T1048</id></mitre>
+    </rule>
+    <rule id="100073" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1048.002</field>
+        <description>Auditd: mitre attack T1048.002</description>
+        <mitre><id>T1048.002</id></mitre>
+    </rule>
+    <rule id="100074" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1048.003</field>
+        <description>Auditd: mitre attack T1048.003</description>
+        <mitre><id>T1048.003</id></mitre>
+    </rule>
+    <rule id="100075" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1049</field>
+        <description>Auditd: mitre attack T1049</description>
+        <mitre><id>T1049</id></mitre>
+    </rule>
+    <rule id="100076" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1053.002</field>
+        <description>Auditd: mitre attack T1053.002</description>
+        <mitre><id>T1053.002</id></mitre>
+    </rule>
+    <rule id="100077" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1053.003</field>
+        <description>Auditd: mitre attack T1053.003</description>
+        <mitre><id>T1053.003</id></mitre>
+    </rule>
+    <rule id="100078" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1053.006</field>
+        <description>Auditd: mitre attack T1053.006</description>
+        <mitre><id>T1053.006</id></mitre>
+    </rule>
+    <rule id="100079" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1053.007</field>
+        <description>Auditd: mitre attack T1053.007</description>
+        <mitre><id>T1053.007</id></mitre>
+    </rule>
+    <rule id="100080" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1056.001</field>
+        <description>Auditd: mitre attack T1056.001</description>
+        <mitre><id>T1056.001</id></mitre>
+    </rule>
+    <rule id="100081" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1057</field>
+        <description>Auditd: mitre attack T1057</description>
+        <mitre><id>T1057</id></mitre>
+    </rule>
+    <rule id="100082" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1059.004</field>
+        <description>Auditd: mitre attack T1059.004</description>
+        <mitre><id>T1059.004</id></mitre>
+    </rule>
+    <rule id="100083" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1059.006</field>
+        <description>Auditd: mitre attack T1059.006</description>
+        <mitre><id>T1059.006</id></mitre>
+    </rule>
+    <rule id="100084" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1069.001</field>
+        <description>Auditd: mitre attack T1069.001</description>
+        <mitre><id>T1069.001</id></mitre>
+    </rule>
+    <rule id="100085" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1069.002</field>
+        <description>Auditd: mitre attack T1069.002</description>
+        <mitre><id>T1069.002</id></mitre>
+    </rule>
+    <rule id="100086" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1070.002</field>
+        <description>Auditd: mitre attack T1070.002</description>
+        <mitre><id>T1070.002</id></mitre>
+    </rule>
+    <rule id="100087" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1070.003</field>
+        <description>Auditd: mitre attack T1070.003</description>
+        <mitre><id>T1070.003</id></mitre>
+    </rule>
+    <rule id="100088" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1070.004</field>
+        <description>Auditd: mitre attack T1070.004</description>
+        <mitre><id>T1070.004</id></mitre>
+    </rule>
+
   
 </group>
