@@ -5,7 +5,6 @@ readteam
 /home/stoksoz/atom.json
 
 {"loggenerator": "redteam", "Execution Time (UTC)": "2024-04-27T21:18:57Z", "Execution Time (Local)": "2024-04-27T21:18:57Z", "Technique": "T1059.006", "Test Number": "1", "Test Name": "Execute shell script via python's command mode arguement", "Hostname": "ff1ff12fdb4b", "IP Address": "172.17.0.2", "Username": "root", "GUID": "3a95cdb2-c6ea-4761-b24e-02b71889b8bb", "ProcessId": "24120", "ExitCode": "0"}
-{"loggenerator": "redteam", "Execution Time (UTC)": "2024-04-29T12:47:56Z", "Execution Time (Local)": "2024-04-29T12:47:56Z", "Technique": "T1003.008", "Test Number": "1", "Test Name": "Access /etc/shadow (Local)", "Hostname": "67ced8631a0f", "IP Address": "172.17.0.2", "Username": "root", "GUID": "3723ab77-c546-403c-8fb4-bb577033b235", "ProcessId": "43", "ExitCode": "0"}
 
 
 
