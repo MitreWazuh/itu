@@ -1,10 +1,3 @@
-<!-- Modify it at your will. --><!--
-  -  Suricata rules
-  -  Created by Wazuh, Inc.
-  -  Copyright (C) 2015, Wazuh Inc.
-  -  This program is a free software; you can redistribute it and/or modify it under the terms of GPLv2.
--->
-
 <!-- ID: 86600 - 86699 -->
 
 <group name="ids,suricata,">
@@ -16,54 +9,83 @@
         <decoded_as>json</decoded_as>
         <field name="timestamp">\.+</field>
         <field name="event_type">\.+</field>
-        <mitre>
-    <id>T1048</id>
-</mitre>
+        <mitre><id>T1048</id></mitre>
         <description>Suricata messages.</description>
-       
     </rule>
 
     <rule id="86601" level="6" overwrite="yes">
         <if_sid>86600</if_sid>
         <field name="event_type">^alert$</field>
-        <mitre>
-    <id>T1133</id>
-</mitre>
+        <mitre><id>T1133</id></mitre>
         <description>Suricata: Alert - $(alert.signature)</description>
-    
     </rule>
 
-    <rule id="86602" level="6" overwrite="yes">
+
+    <rule id="86602" level="7" overwrite="yes">
+        <if_sid>86601</if_sid>
+        <field name="alert.metadata.tag">^3CORESec$</field>
+        <mitre><id>T1133</id></mitre>
+        <description>Suricata: Alert - $(alert.signature)</description>
+    </rule>
+
+
+    <rule id="86603" level="7" overwrite="yes">
+        <if_sid>86601</if_sid>
+        <field name="alert.metadata.tag">^COMPROMISED$</field>
+        <mitre><id>T1133</id></mitre>
+        <description>Suricata: Alert - $(alert.signature)</description>
+    </rule>
+
+    <rule id="86604" level="7" overwrite="yes">
+        <if_sid>86601</if_sid>
+        <field name="alert.metadata.tag">^Dshield$</field>
+        <mitre><id>T1043</id></mitre>
+        <description>Suricata: Alert - $(alert.signature)</description>
+    </rule>
+
+    <rule id="86605" level="7" overwrite="yes">
+        <if_sid>86601</if_sid>
+        <field name="alert.metadata.tag">^CINS$</field>
+        <mitre><id>T1133</id></mitre>
+        <description>Suricata: Alert - $(alert.signature)</description>
+    </rule>
+
+    <rule id="86606" level="7" overwrite="yes">
+        <if_sid>86601</if_sid>
+        <field name="alert.metadata.tag">^External_IP_Lookup$</field>
+        <mitre><id>T1133</id></mitre>
+        <description>Suricata: Alert - $(alert.signature)</description>
+    </rule>
+
+
+    <rule id="86607" level="6" overwrite="yes">
         <if_sid>86600</if_sid>
         <field name="event_type">^http$</field>
         <description>Suricata: HTTP.</description>
-   
     </rule>
 
-    <rule id="86603" level="6" overwrite="yes">
+    <rule id="86608" level="6" overwrite="yes">
         <if_sid>86600</if_sid>
         <field name="event_type">^dns$</field>
         <description>Suricata: DNS.</description>
   
     </rule>
 
-    <rule id="86604" level="6" overwrite="yes">
+    <rule id="86609" level="6" overwrite="yes">
         <if_sid>86600</if_sid>
         <field name="event_type">^tls$</field>
         <description>Suricata: TLS.</description>
      </rule>
 
-    <rule id="86605" level="6" overwrite="yes">
+    <rule id="86610" level="6" overwrite="yes">
         <if_sid>86600</if_sid>
         <field name="event_type">^flow$</field>
-<mitre>
-    <id>T1133</id>
-    <id>T1043</id>
-    <id>T1078</id>
-    <id>T1030</id>
-</mitre>        
+        <mitre><id>T1133</id>
+          <id>T1043</id>
+          <id>T1078</id>
+          <id>T1030</id>
+        </mitre>        
         <description>Suricata: FLOW.</description>
- 
     </rule>
 
 </group>
