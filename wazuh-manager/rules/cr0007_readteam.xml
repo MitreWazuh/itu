@@ -242,6 +242,11 @@ readteam
         <description>Auditd: mitre attack T1070.004</description>
         <mitre><id>T1070.004</id></mitre>
     </rule>
-
+    <rule id="100088" level="6">
+        <if_sid>100050</if_sid>
+        <field name="Technique">T1003.008</field>
+        <description>Auditd: mitre attack T1003.008</description>
+        <mitre><id>T1003.008</id></mitre>
+    </rule>
   
 </group>
