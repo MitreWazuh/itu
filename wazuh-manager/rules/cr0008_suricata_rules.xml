@@ -1,4 +1,4 @@
-<!--
+<!-- Modify it at your will. --><!--
   -  Suricata rules
   -  Created by Wazuh, Inc.
   -  Copyright (C) 2015, Wazuh Inc.
@@ -16,6 +16,9 @@
         <decoded_as>json</decoded_as>
         <field name="timestamp">\.+</field>
         <field name="event_type">\.+</field>
+        <mitre>
+    <id>T1048</id>
+</mitre>
         <description>Suricata messages.</description>
        
     </rule>
@@ -23,6 +26,9 @@
     <rule id="86601" level="6" overwrite="yes">
         <if_sid>86600</if_sid>
         <field name="event_type">^alert$</field>
+        <mitre>
+    <id>T1133</id>
+</mitre>
         <description>Suricata: Alert - $(alert.signature)</description>
     
     </rule>
@@ -45,6 +51,18 @@
         <if_sid>86600</if_sid>
         <field name="event_type">^tls$</field>
         <description>Suricata: TLS.</description>
+     </rule>
+
+    <rule id="86605" level="6" overwrite="yes">
+        <if_sid>86600</if_sid>
+        <field name="event_type">^flow$</field>
+<mitre>
+    <id>T1133</id>
+    <id>T1043</id>
+    <id>T1078</id>
+    <id>T1030</id>
+</mitre>        
+        <description>Suricata: FLOW.</description>
  
     </rule>
 
