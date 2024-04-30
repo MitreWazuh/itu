@@ -12,4 +12,51 @@
         <field name="eventid">^cowrie</field>
         <description>cowrie messages.</description>
     </rule>
+
+    <rule id="100001" level="6">
+        <if_sid>100000</if_sid>
+        <field name="eventid">cowrie.session.closed</field>
+        <mitre>
+            <id>T1529</id>
+        </mitre>
+        <description>cowrie cowrie.session.closed messages.</description>
+    </rule>
+
+    <rule id="100002" level="6">
+        <if_sid>100000</if_sid>
+        <field name="eventid">cowrie.log.closed</field>
+        <mitre>
+            <id>T1526</id>
+        </mitre>
+        <description>cowrie cowrie.log.closed messages.</description>
+    </rule>
+
+    <rule id="100003" level="6">
+        <if_sid>100000</if_sid>
+        <field name="eventid">cowrie.command.failed</field>
+        <mitre>
+            <id>T1059</id>
+        </mitre>
+        <description>cowrie cowrie.command.failed messages.</description>
+    </rule>
+    
+    <rule id="100004" level="6">
+        <if_sid>100000</if_sid>
+        <field name="eventid">cowrie.client.kex</field>
+        <mitre>
+            <id>T1078</id>
+        </mitre>
+        <description>cowrie cowrie.client.kex messages.</description>
+    </rule>
+
+    <rule id="100005" level="6">
+        <if_sid>100000</if_sid>
+        <field name="eventid">cowrie.session.connect</field>
+        <mitre>
+            <id>T1020</id>
+        </mitre>
+        <description>cowrie cowrie.session.connect messages.</description>
+    </rule>
+    
+
 </group>
