@@ -59,4 +59,14 @@
     </rule>
     
 
+    <rule id="100005" level="6">
+        <if_sid>100000</if_sid>
+        <field name="eventid">cowrie.client.version</field>
+        <mitre>
+            <id>T1027</id>
+        </mitre>
+        <description>cowrie cowrie.client.version messages.</description>
+    </rule>
+
+    
 </group>
