@@ -59,7 +59,7 @@
     </rule>
     
 
-    <rule id="100005" level="6">
+    <rule id="100006" level="6">
         <if_sid>100000</if_sid>
         <field name="eventid">cowrie.client.version</field>
         <mitre>
@@ -68,5 +68,13 @@
         <description>cowrie cowrie.client.version messages.</description>
     </rule>
 
+    <rule id="100007" level="6">
+        <if_sid>100000</if_sid>
+        <field name="eventid">cowrie.login.success</field>
+        <mitre>
+            <id>T1078</id>
+        </mitre>
+        <description>cowrie cowrie.login.success messages.</description>
+    </rule>
     
 </group>
