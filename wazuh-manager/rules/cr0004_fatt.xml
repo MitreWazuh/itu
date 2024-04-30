@@ -12,9 +12,8 @@ fatt
 
     <rule id="100030" level="5">
         <decoded_as>json</decoded_as>
-        <field name="timestamp">\.+</field>
-        <field name="tls.ja3s">\.+</field>
-        <field name="tls.ja3sAlgorithms">\.+</field>
+        <field name="timestamp_fatt">\.+</field>
+     
                   <mitre>
     <id>T1082</id>
 </mitre>
