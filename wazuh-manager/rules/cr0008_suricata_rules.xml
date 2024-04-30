@@ -88,4 +88,69 @@
         <description>Suricata: FLOW.</description>
     </rule>
 
+    <rule id="86611" level="6" overwrite="yes">
+        <if_sid>86600</if_sid>
+        <field name="event_type">^fileinfo$</field>
+        <description>Suricata: FLOW.</description>
+    </rule>
+
+    <rule id="86612" level="7" overwrite="yes">
+        <if_sid>86611</if_sid>
+        <field name="http.http_method">PUT</field>
+        <mitre>
+            <id>T1102</id>
+            <id>T1036</id>
+            <id>T1082</id>
+            <id>T1041</id>
+            <id>T1119</id>
+            <id>T1485</id>
+            <id>T1053</id>
+        </mitre>
+        <description>Suricata: FLOW.</description>
+    </rule>
+
+    <rule id="86613" level="7" overwrite="yes">
+        <if_sid>86611</if_sid>
+        <field name="http.http_method">GET</field>
+        <mitre>
+            <id>T1102</id>
+            <id>T1036</id>
+            <id>T1082</id>
+            <id>T1041</id>
+            <id>T1119</id>
+            <id>T1485</id>
+            <id>T1053</id>
+        </mitre>
+        <description>Suricata: FLOW.</description>
+    </rule>
+
+
+    <rule id="86614" level="7" overwrite="yes">
+        <if_sid>86611</if_sid>
+        <field name="http.http_method">POST</field>
+        <mitre>
+            <id>T1102</id>
+            <id>T1036</id>
+            <id>T1082</id>
+            <id>T1041</id>
+            <id>T1119</id>
+            <id>T1485</id>
+            <id>T1053</id>
+        </mitre>
+        <description>Suricata: FLOW.</description>
+    </rule>
+
+    <rule id="86615" level="7" overwrite="yes">
+        <if_sid>86600</if_sid>
+        <field name="event_type">ssh</field>
+        <mitre>
+            <id>T1078</id>
+            <id>T1107</id>
+        </mitre>
+        <description>Suricata: FLOW.</description>
+    </rule>
+
+
+    
+
 </group>
