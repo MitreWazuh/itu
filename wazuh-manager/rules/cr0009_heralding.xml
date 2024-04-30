@@ -1,0 +1,29 @@
+<!--
+
+heralding
+100150-100199  
+/home/stoksoz/tpotce/data/heralding/log/heralding.log
+
+2024-04-29 19:10:14,332 (heralding.honeypot) Could not request public ip from ipify, error: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc0a4952bd0>: Failed to establish a new connection: [Errno -3] Try again'))
+
+-->
+
+
+
+<group name="heralding,">
+
+
+  <rule id="100150" level="5" overwrite="yes">
+    <if_sid>1002</if_sid>
+    <match>heralding.honeypot</match>
+    <description>Heralding Honeypot: mitre attack T1552</description>
+
+<mitre>
+    <id>T1119</id>
+    <id>T1498</id>
+    <id>T1132</id>
+</mitre>
+
+  </rule>
+  
+  </group>
