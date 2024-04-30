@@ -14,5 +14,68 @@ p0f
         <description>fatt messages.</description>
     </rule>
 
+
+     <rule id="100041" level="6">
+        <if_sid>100040</if_sid>
+        <field name="mod_p0f">mtu</field>
+        <mitre>
+          <id>T1095</id>
+        </mitre>
+        <description>fatt mtu messages.</description>
+    </rule>
+
+
+     <rule id="100042" level="6">
+        <if_sid>100040</if_sid>
+        <field name="mod_p0f">^syn</field>
+        <mitre>
+          <id>T1065</id>
+        </mitre>
+        <description>fatt syn/syn+ack messages.</description>
+    </rule>
+
+
+       <rule id="100043" level="6">
+        <if_sid>100040</if_sid>
+        <field name="mod_p0f">^http</field>
+        <mitre>
+          <id>T1132</id>
+        </mitre>
+        <description>fatt http messages.</description>
+    </rule>
+
+
+       <rule id="100044" level="6">
+        <if_sid>100040</if_sid>
+        <field name="mod_p0f">^host</field>
+        <mitre>
+          <id>T1091</id>
+        </mitre>
+        <description>fatt shost changed messages.</description>
+    </rule>
+
+       <rule id="100045" level="6">
+        <if_sid>100040</if_sid>
+        <field name="mod_p0f">^uptime</field>
+        <mitre>
+          <id>T1091</id>
+        </mitre>
+        <description>fatt shost changed messages.</description>
+    </rule>
+
+<!--
+  {"timestamp_p0f": "2024/04/30 06:56:59", "mod_p0f": "ip sharing", "client_ip_p0f": "10.1.0.4", "server_ip_p0f": "20.209.74.65", "client_port_p0f": 45058, "server_port_p0f": 443, "subject_p0f": "cli", "reason_p0f": "tstamp port", "raw_hits_p0f": "0,5,5,5"}
+-->
+         <rule id="100046" level="6">
+        <if_sid>100040</if_sid>
+        <field name="mod_p0f">^ip</field>
+        <mitre>
+          <id>T1016</id>
+        </mitre>
+        <description>fatt ip sharing  messages.</description>
+    </rule>
+
+  
+
   
 </group>
