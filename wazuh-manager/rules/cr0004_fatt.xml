@@ -20,7 +20,7 @@
     </rule>
 
     <rule id="100031" level="6">
-        <if_sid>100030</if_did>
+        <if_sid>100030</if_sid>
         <field name="protocol_fatt">tls</field>
             <mitre>
     <id>T1082</id>
@@ -29,7 +29,7 @@
     </rule>
 
         <rule id="100032" level="6">
-        <if_sid>100030</if_did>
+        <if_sid>100030</if_sid>
         <field name="protocol_fatt">http</field>
             <mitre>
     <id>T1082</id>
