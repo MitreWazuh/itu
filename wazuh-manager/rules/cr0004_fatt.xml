@@ -13,9 +13,29 @@
         <field name="timestamp">\.+</field>
         <field name="tls.ja3s">\.+</field>
         <field name="tls.ja3sAlgorithms">\.+</field>
+                  <mitre>
+    <id>T1082</id>
+</mitre>
         <description>fatt messages.</description>
     </rule>
 
+    <rule id="100031" level="6">
+        <if_sid>100030</if_did>
+        <field name="protocol_fatt">tls</field>
+            <mitre>
+    <id>T1082</id>
+</mitre>
+        <description>fatt messages.</description>
+    </rule>
+
+        <rule id="100032" level="6">
+        <if_sid>100030</if_did>
+        <field name="protocol_fatt">http</field>
+            <mitre>
+    <id>T1082</id>
+</mitre>
+        <description>fatt messages.</description>
+    </rule>
   
 </group>
 
