@@ -1,9 +1,11 @@
 <!--
-    fatt
-    100030-100039  
-    /home/stoksoz/tpotce/data/fatt/log/fatt.log
-  {"timestamp": "2024-04-28T06:55:39.915488", "sourceIp": "20.209.74.65", "destinationIp": "10.1.0.4", "sourcePort": "443", "destinationPort": "51954", "protocol": "tls", "tls": {"ja3s": "33041e77e884c5f438f2076ae1e21278", "ja3sAlgorithms": "771,0x1302,43-51", "ja3sVersion": "771", "ja3sCiphers": "0x1302", "ja3sExtensions": "43-51"}}
- -->
+
+fatt
+100030-100039  
+/home/stoksoz/tpotce/data/fatt/log/fatt.log
+{"timestamp_fatt": "2024-04-30T10:28:44.909797", "sourceIp_fatt": "168.63.129.16", "destinationIp_fatt": "10.1.0.4", "sourcePort_fatt": "80", "destinationPort_fatt": "49616", "protocol_fatt": "http", "http_fatt": {"server": "Microsoft-IIS/10.0", "responseVersion": "HTTP/1.1", "responseCode": "200", "contentLength": "2", "serverHeaderOrder": "content_type,server,date,connection,content_length", "serverHeaderHash": "ad35034495f74d91dce027dff6c70a24"}}
+
+-->
 
 
 <group name="fatt,">
