@@ -31,6 +31,20 @@ readteam
               <id>T1119</id>
           </mitre>
         <description>dvwa messages method GET</description>
-    </rule>  
-   
+    </rule> 
+	
+      <rule id="100203" level="7">
+        <if_sid>100201</if_sid>
+        <field name="url">vulnerabilities</field>
+	<field name="url">javascript</field>
+          <mitre>
+              <id>T1135</id>
+              <id>T1119</id>
+          </mitre>
+        <description>dvwa messages method GET</description>
+    </rule> 
+
+
+	
+  
 </group>
