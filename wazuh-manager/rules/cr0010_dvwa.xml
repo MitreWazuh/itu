@@ -19,7 +19,7 @@ readteam
 
     <rule id="100201" level="6">
         <if_sid>100200</if_sid>
-        <field name="method_dvwa">GET</field>
+        <field name="method_dvwa">GET|POST</field>
         <description>dvwa messages method GET</description>
     </rule>
 
@@ -30,7 +30,7 @@ readteam
     		<id>T1135</id>
 		    <id>T1119</id>
 	</mitre>
-        <description>dvwa messages method GET - brute force </description>
+        <description>dvwa messages method GET/POST - brute force </description>
     </rule> 
 	
       <rule id="100203" level="7">
@@ -40,7 +40,7 @@ readteam
               <id>T1135</id>
               <id>T1119</id>
           </mitre>
-        <description>dvwa messages method GET</description>
+        <description>dvwa messages method GET/POST - login</description>
     </rule> 
 
       <rule id="100204" level="7">
@@ -50,7 +50,7 @@ readteam
               <id>T1046</id>
               <id>T1070</id>
           </mitre>
-        <description>dvwa messages method GET csp</description>
+        <description>dvwa messages method GET/POST- csp</description>
     </rule> 
 
       <rule id="100205" level="7">
@@ -60,7 +60,7 @@ readteam
               <id>T1071</id>
               <id>T1203</id>
           </mitre>
-        <description>dvwa messages method GET - javascript</description>
+        <description>dvwa messages method GET/POST - javascript</description>
     </rule> 	
 
       <rule id="100206" level="7">
@@ -70,7 +70,7 @@ readteam
               <id>T1027</id>
               <id>T1210</id>
           </mitre>
-        <description>dvwa messages method GET - xss</description>
+        <description>dvwa messages method GET/POST - xss</description>
     </rule> 
 
 
@@ -81,7 +81,7 @@ readteam
               <id>T1110</id>
               <id>T1046</id>
           </mitre>
-        <description>dvwa messages method GET - weak_id</description>
+        <description>dvwa messages method GET/POST - weak_id</description>
     </rule> 
 
 <rule id="100208" level="7">
@@ -91,7 +91,7 @@ readteam
               <id>T1220</id>
               <id>T1012</id>
           </mitre>
-        <description>dvwa messages method GET - sql_blind</description>
+        <description>dvwa messages method GET/POST - sql_blind</description>
     </rule> 
 
 <rule id="100209" level="7">
@@ -101,7 +101,7 @@ readteam
               <id>T1220</id>
               <id>T1046</id>
           </mitre>
-        <description>dvwa messages method GET - sql_blind</description>
+        <description>dvwa messages method GET/POST - sql_blind</description>
     </rule> 
 
 <rule id="100210" level="7">
@@ -111,7 +111,7 @@ readteam
               <id>T1003</id>
               <id>T1027</id>
           </mitre>
-        <description>dvwa messages method GET - captcha</description>
+        <description>dvwa messages method GET/POST - captcha</description>
     </rule> 
 
   <rule id="100211" level="7">
@@ -121,7 +121,7 @@ readteam
               <id>T1003</id>
               <id>T1027</id>
           </mitre>
-        <description>dvwa messages method GET - captcha</description>
+        <description>dvwa messages method GEGET/POSTT - captcha</description>
     </rule> 
 	
   <rule id="100212" level="7">
@@ -131,7 +131,7 @@ readteam
               <id>T1190</id>
               <id>T1059</id>
           </mitre>
-        <description>dvwa messages method GET - upload</description>
+        <description>dvwa messages method GET/POST - upload</description>
     </rule> 
 	
   <rule id="100213" level="7">
@@ -141,7 +141,7 @@ readteam
               <id>T1102</id>
               <id>T1070</id>
           </mitre>
-        <description>dvwa messages method GET - vulnerable PHP</description>
+        <description>dvwa messages method GET/POST - vulnerable PHP</description>
     </rule> 
 
   <rule id="100214" level="7">
@@ -151,9 +151,16 @@ readteam
               <id>T1070</id>
               <id>T1064</id>
           </mitre>
-        <description>dvwa messages method GET - security.php</description>
+        <description>dvwa messages method GET/POST - security.php</description>
     </rule> 
 
-
+  <rule id="100215" level="7">
+        <if_sid>100201</if_sid>
+        <field name="url_dvwa">css</field>
+          <mitre>
+            <id>T1069</id>
+          </mitre>
+        <description>dvwa messages method GET/POST - security.php</description>
+    </rule> 
 	
 </group>
