@@ -84,7 +84,7 @@ readteam
         <description>dvwa messages method GET - weak_id</description>
     </rule> 
 
-	 <rule id="100208" level="7">
+<rule id="100208" level="7">
         <if_sid>100201</if_sid>
         <field name="url_dvwa">sql_blind</field>
           <mitre>
@@ -94,7 +94,7 @@ readteam
         <description>dvwa messages method GET - sql_blind</description>
     </rule> 
 
-		 <rule id="100209" level="7">
+<rule id="100209" level="7">
         <if_sid>100201</if_sid>
         <field name="url_dvwa">sqli</field>
           <mitre>
@@ -103,4 +103,37 @@ readteam
           </mitre>
         <description>dvwa messages method GET - sql_blind</description>
     </rule> 
+
+<rule id="100210" level="7">
+        <if_sid>100201</if_sid>
+        <field name="url_dvwa">captcha</field>
+          <mitre>
+              <id>T1003</id>
+              <id>T1027</id>
+          </mitre>
+        <description>dvwa messages method GET - captcha</description>
+    </rule> 
+
+  <rule id="100211" level="7">
+        <if_sid>100201</if_sid>
+        <field name="url_dvwa">captcha</field>
+          <mitre>
+              <id>T1003</id>
+              <id>T1027</id>
+          </mitre>
+        <description>dvwa messages method GET - captcha</description>
+    </rule> 
+
+
+	
+  <rule id="100212" level="7">
+        <if_sid>100201</if_sid>
+        <field name="url_dvwa">upload</field>
+          <mitre>
+              <id>T1190</id>
+              <id>T1059</id>
+          </mitre>
+        <description>dvwa messages method GET - upload</description>
+    </rule> 
+	
 </group>
