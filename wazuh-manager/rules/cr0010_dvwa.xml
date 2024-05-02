@@ -1,0 +1,27 @@
+<!--
+
+readteam
+100200-100299 
+/home/stoksoz/dvwa/logs/access.json
+
+
+
+-->
+
+
+<group name="readteam,">
+
+    <rule id="100200" level="5">
+        <decoded_as>json</decoded_as>
+        <field name="loggenerator">dvwa</field>
+        <description>dvwa messages.</description>
+    </rule>
+
+    <rule id="100201" level="6">
+        <if_sid>100200</if_sid>
+        <field name="Technique">T1003.007</field>
+        <description>Auditd: mitre attack T1003.007</description>
+        <mitre><id>T1003.007</id></mitre>
+    </rule>
+   
+</group>
