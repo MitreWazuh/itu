@@ -10,14 +10,14 @@
         <field name="timestamp">\.+</field>
         <field name="event_type">\.+</field>
         <mitre><id>T1048</id></mitre>
-        <description>Suricata messages.</description>
+        <description>suricata log messages.</description>
     </rule>
 
     <rule id="86601" level="6" overwrite="yes">
         <if_sid>86600</if_sid>
         <field name="event_type">^alert$</field>
         <mitre><id>T1133</id></mitre>
-        <description>Suricata: Alert - $(alert.signature)</description>
+        <description>suricata log messages : alert $(alert.signature)</description>
     </rule>
 
 
@@ -54,19 +54,29 @@
         <if_sid>86601</if_sid>
         <field name="alert.metadata.tag">^External_IP_Lookup$</field>
         <mitre><id>T1133</id></mitre>
-        <description>Suricata: Alert - $(alert.signature)</description>
+        <description>Suricata: External_IP_Lookup Alert - $(alert.signature)</description>
     </rule>
 
 
     <rule id="86607" level="6" overwrite="yes">
         <if_sid>86600</if_sid>
         <field name="event_type">^http$</field>
-        <description>Suricata: HTTP.</description>
+        <mitre>
+            <id>T1003</id>
+            <id>T1082</id>
+            <id>T1119</id>
+            <id>T1078</id>
+        </mitre>
+        <description>Suricata: HTTP - Mitre T1003-T1082-T1119-T1078.</description>
     </rule>
 
     <rule id="86608" level="6" overwrite="yes">
         <if_sid>86600</if_sid>
         <field name="event_type">^dns$</field>
+         <mitre>
+            <id>T1018</id>
+            <id>T1071</id>
+        </mitre>
         <description>Suricata: DNS.</description>
   
     </rule>
@@ -74,6 +84,10 @@
     <rule id="86609" level="6" overwrite="yes">
         <if_sid>86600</if_sid>
         <field name="event_type">^tls$</field>
+        <mitre>
+            <id>T1078</id>
+            <id>T1071</id>
+        </mitre>
         <description>Suricata: TLS.</description>
      </rule>
 
