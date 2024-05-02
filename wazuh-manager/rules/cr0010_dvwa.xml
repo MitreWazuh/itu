@@ -19,13 +19,13 @@ readteam
 
     <rule id="100201" level="6">
         <if_sid>100200</if_sid>
-        <field name="method">GET</field>
+        <field name="method_dvwa">GET</field>
         <description>dvwa messages method GET</description>
     </rule>
 
       <rule id="100202" level="7">
         <if_sid>100201</if_sid>
-        <field name="url">phpinfo.php$</field>
+        <field name="url_dvwa">phpinfo.php$</field>
           <mitre>
               <id>T1135</id>
               <id>T1119</id>
@@ -35,8 +35,8 @@ readteam
 	
       <rule id="100203" level="7">
         <if_sid>100201</if_sid>
-        <field name="url">vulnerabilities</field>
-	<field name="url">javascript</field>
+        <field name="url_dvwa">vulnerabilities</field>
+	<field name="url_dvwa">javascript</field>
           <mitre>
               <id>T1135</id>
               <id>T1119</id>
