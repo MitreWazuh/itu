@@ -93,5 +93,14 @@ readteam
           </mitre>
         <description>dvwa messages method GET - sql_blind</description>
     </rule> 
-  
+
+		 <rule id="100209" level="7">
+        <if_sid>100201</if_sid>
+        <field name="url_dvwa">sqli</field>
+          <mitre>
+              <id>T1220</id>
+              <id>T1046</id>
+          </mitre>
+        <description>dvwa messages method GET - sql_blind</description>
+    </rule> 
 </group>
