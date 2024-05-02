@@ -123,8 +123,6 @@ readteam
           </mitre>
         <description>dvwa messages method GET - captcha</description>
     </rule> 
-
-
 	
   <rule id="100212" level="7">
         <if_sid>100201</if_sid>
@@ -135,5 +133,27 @@ readteam
           </mitre>
         <description>dvwa messages method GET - upload</description>
     </rule> 
+	
+  <rule id="100213" level="7">
+        <if_sid>100201</if_sid>
+        <field name="url_dvwa">include.php|file1.php|file2.php|file3.php</field>
+          <mitre>
+              <id>T1102</id>
+              <id>T1070</id>
+          </mitre>
+        <description>dvwa messages method GET - vulnerable PHP</description>
+    </rule> 
+
+  <rule id="100214" level="7">
+        <if_sid>100201</if_sid>
+        <field name="url_dvwa">security.php</field>
+          <mitre>
+              <id>T1070</id>
+              <id>T1064</id>
+          </mitre>
+        <description>dvwa messages method GET - security.php</description>
+    </rule> 
+
+
 	
 </group>
