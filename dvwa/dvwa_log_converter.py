@@ -23,7 +23,13 @@ def parse_access_log(log_file):
 def save_to_json(log_entries, json_file):
     with open(json_file, 'w') as f:
         for entry in log_entries:
-            json.dump(entry, f)
+            modified_entry = {}
+            for key, value in entry.items():
+                if key != 'loggenerator':
+                    modified_entry[key + '_dvwa'] = value
+                else:
+                    modified_entry[key] = value
+            json.dump(modified_entry, f)
             f.write('\n')
 
 log_file_path = '/home/stoksoz/access.log'
