@@ -4,8 +4,8 @@ readteam
 100200-100299 
 /home/stoksoz/dvwa/logs/access.json
 
-{"loggenerator":"dvwa","ip":"172.17.0.1","date":"30/Apr/2024:13:48:19 +0000","method":"POST","url":"/vulnerabilities/javascript/","status":"HTTP/1.1","bytes":"200"}
-
+{"loggenerator":"dvwa","ip":"172.17.0.1","date":"30/Apr/2024:13:48:33 +0000","method":"GET","url":"/phpinfo.php","status":"HTTP/1.1","bytes":"200"}
+	
 -->
 
 
@@ -19,9 +19,18 @@ readteam
 
     <rule id="100201" level="6">
         <if_sid>100200</if_sid>
-        <field name="Technique">T1003.007</field>
-        <description>Auditd: mitre attack T1003.007</description>
-        <mitre><id>T1003.007</id></mitre>
+        <field name="method">GET</field>
+        <description>dvwa messages method GET</description>
     </rule>
+
+      <rule id="100202" level="7">
+        <if_sid>100201</if_sid>
+        <field name="url">phpinfo.php$</field>
+          <mitre>
+              <id>T1135</id>
+              <id>T1119</id>
+          </mitre>
+        <description>dvwa messages method GET</description>
+    </rule>  
    
 </group>
