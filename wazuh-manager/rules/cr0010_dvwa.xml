@@ -25,18 +25,17 @@ readteam
 
       <rule id="100202" level="7">
         <if_sid>100201</if_sid>
-        <field name="url_dvwa">phpinfo.php$</field>
-          <mitre>
-              <id>T1135</id>
-              <id>T1119</id>
-          </mitre>
-        <description>dvwa messages method GET</description>
+        <field name="url_dvwa">brute</field>
+       	<mitre>
+    		<id>T1135</id>
+		    <id>T1119</id>
+	</mitre>
+        <description>dvwa messages method GET - brute force </description>
     </rule> 
 	
       <rule id="100203" level="7">
         <if_sid>100201</if_sid>
-        <field name="url_dvwa">vulnerabilities</field>
-	<field name="url_dvwa">javascript</field>
+        <field name="url_dvwa">login.php</field>
           <mitre>
               <id>T1135</id>
               <id>T1119</id>
@@ -44,7 +43,55 @@ readteam
         <description>dvwa messages method GET</description>
     </rule> 
 
+      <rule id="100204" level="7">
+        <if_sid>100201</if_sid>
+        <field name="url_dvwa">csp</field>
+          <mitre>
+              <id>T1046</id>
+              <id>T1070</id>
+          </mitre>
+        <description>dvwa messages method GET csp</description>
+    </rule> 
 
-	
+      <rule id="100205" level="7">
+        <if_sid>100201</if_sid>
+        <field name="url_dvwa">javascript</field>
+          <mitre>
+              <id>T1071</id>
+              <id>T1203</id>
+          </mitre>
+        <description>dvwa messages method GET - javascript</description>
+    </rule> 	
+
+      <rule id="100206" level="7">
+        <if_sid>100201</if_sid>
+        <field name="url_dvwa">xss_</field>
+          <mitre>
+              <id>T1027</id>
+              <id>T1210</id>
+          </mitre>
+        <description>dvwa messages method GET - xss</description>
+    </rule> 
+
+
+ <rule id="100207" level="7">
+        <if_sid>100201</if_sid>
+        <field name="url_dvwa">weak_id</field>
+          <mitre>
+              <id>T1110</id>
+              <id>T1046</id>
+          </mitre>
+        <description>dvwa messages method GET - weak_id</description>
+    </rule> 
+
+	 <rule id="100208" level="7">
+        <if_sid>100201</if_sid>
+        <field name="url_dvwa">sql_blind</field>
+          <mitre>
+              <id>T1220</id>
+              <id>T1012</id>
+          </mitre>
+        <description>dvwa messages method GET - sql_blind</description>
+    </rule> 
   
 </group>
