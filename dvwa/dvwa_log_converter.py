@@ -9,6 +9,7 @@ def parse_access_log(log_file):
             match = re.match(pattern, line)
             if match:
                 entry = {
+                    'loggenerator': 'dvwa',  # Added loggenerator tag
                     'ip': match.group(1),
                     'date': match.group(4),
                     'method': match.group(5),
