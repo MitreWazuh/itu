@@ -2,6 +2,7 @@
   <prematch>^type=CONFIG_CHANGE</prematch>
 </decoder>
 
+
 <decoder name="auditd-config_change">
   <parent>auditd-config_change</parent>
   <!--<prematch offset="after_parent">^SYSCALL </prematch>-->
@@ -98,7 +99,6 @@
 </decoder>
 
 
-
 <decoder name="auditd-path">
   <parent>auditd-path</parent>
   <!--<prematch offset="after_parent">^SYSCALL </prematch>-->
@@ -115,7 +115,6 @@
 <decoder name="auditd-syscall">
   <prematch>^type=SYSCALL</prematch>
 </decoder>
-
 
 
 <decoder name="auditd-syscall">
@@ -156,7 +155,6 @@
 <decoder name="auditd-user_and_cred">
   <prematch>^type=</prematch>
 </decoder>
-
 
 <decoder name="auditd-user_and_cred">
   <parent>auditd-user_and_cred</parent>
